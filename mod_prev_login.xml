@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.0" client="site" method="upgrade">
+	<name>Dernière connexion</name>
+	<author>ConseilGouz</author>
+	<creationDate>Oct 2021</creationDate>
+	<copyright>Copyright (C) 2021 ConseilGouz. All rights reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2</license>
+	<authorEmail>pascal.leconte@conseilgouz.com</authorEmail>
+	<authorUrl>www.conseilgouz.com</authorUrl>
+	<version>2.0.1</version>
+	<namespace path="src">ConseilGouz\Module\PrevLogin</namespace>
+	<scriptfile>script.php</scriptfile>
+	<changelogurl>https://www.conseilgouz.com/updates/mod_prev_login_changelog.xml</changelogurl>
+	<description>Affichage de la dernière connexion connue</description>
+	<files>
+		<filename module="mod_prev_login">mod_prev_login.php</filename>
+		<folder>tmpl</folder>
+		<folder>src</folder>
+	</files>
+	<config>
+	
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="timezone" type="radio" class="btn-group btn-group-yesno" label="Time Zone ?" description="Sélectionner la timezone à prendre en compte." default="true" >
+				<option value="true">Utilisateur</option>
+				<option value="false">Serveur</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea"
+					rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+	<server type="extension" name="Dernière connexion" priority="1">	
+		http://www.conseilgouz.com/updates/mod_prev_login_update.xml
+	</server>
+	</updateservers>
+	
+</extension>

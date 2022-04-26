@@ -1,0 +1,24 @@
+<changelogs>
+	<changelog>
+		<element>mod_prev_login</element>
+		<type>module</type>
+		<version>2.0.1</version>
+        <note>
+            <item>Update : 09/10/2021</item>
+        </note>
+        <fix>
+            <item>Affichage date incorrect</item>
+        </fix>
+	</changelog>
+	<changelog>
+		<element>mod_prev_login</element>
+		<type>module</type>
+		<version>2.0.0</version>
+        <note>
+            <item>Update : 08/10/2021</item>
+        </note>
+        <addition>
+            <item>Joomla 4.0 compatibility</item>
+        </addition>
+	</changelog>
+</changelogs>
