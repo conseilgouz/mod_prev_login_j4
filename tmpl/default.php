@@ -9,20 +9,14 @@
  */
 
 defined('_JEXEC') or die;
-use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Factory;
 
 $user = Factory::getUser();
 $perso = "";
 $first = false;
-$current = date('d/m/Y H:i:s');
 $val = $last->profile_value;
-$date1=strtotime($current);
-$date2=strtotime($val);
-$interval  = abs($date1 - $date2);
-$minutes   = round($interval / 60);
-if ($minutes == 0) { // last = current => suppose 1st login
+if (!$val) { // last->profile_value empty => 1st login
 	$first = true;
 }
 if (!$first) { // standard message
