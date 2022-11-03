@@ -2,29 +2,43 @@
 <extension type="module" version="1.0" client="site" method="upgrade">
 	<name>Dernière connexion</name>
 	<author>ConseilGouz</author>
-	<creationDate>Oct 2021</creationDate>
-	<copyright>Copyright (C) 2021 ConseilGouz. All rights reserved</copyright>
+	<creationDate>Nov 2022</creationDate>
+	<copyright>Copyright (C) 2022 ConseilGouz. All rights reserved</copyright>
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2</license>
 	<authorEmail>pascal.leconte@conseilgouz.com</authorEmail>
 	<authorUrl>www.conseilgouz.com</authorUrl>
-	<version>2.0.1</version>
+	<version>2.1.0</version>
 	<namespace path="src">ConseilGouz\Module\PrevLogin</namespace>
 	<scriptfile>script.php</scriptfile>
-	<changelogurl>https://www.conseilgouz.com/updates/mod_prev_login_changelog.xml</changelogurl>
-	<description>Affichage de la dernière connexion connue</description>
+	<description>MOD_PREV_LOGIN_XML_DESCRIPTION</description>
 	<files>
 		<filename module="mod_prev_login">mod_prev_login.php</filename>
 		<folder>tmpl</folder>
 		<folder>src</folder>
 	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/mod_prev_login.ini</language>
+		<language tag="eb-GB">language/en-GB/mod_prev_login.sys.ini</language>
+		<language tag="fr-FR">language/fr-FR/mod_prev_login.ini</language>
+		<language tag="fr-FR">language/fr-FR/mod_prev_login.sys.ini</language>
+	</languages>
+
 	<config>
-	
 		<fields name="params">
 			<fieldset name="basic">
-				<field name="timezone" type="radio" class="btn-group btn-group-yesno" label="Time Zone ?" description="Sélectionner la timezone à prendre en compte." default="true" >
-				<option value="true">Utilisateur</option>
-				<option value="false">Serveur</option>
+			    <field type="note" name="note1" label="MOD_PREV_LOGIN_NOTE1" heading="p" />
+				<field name="perso" type="textarea" label="MOD_PREV_LOGIN_PERSO" description="MOD_PREV_LOGIN_PERSO_DESC" cols="400" rows="4" filter="raw" 
+					default="{def} {date}"
+					/>			
+				<field name="empty" type="radio" class="btn-group btn-group-yesno" label="MOD_PREV_LOGIN_EMPTY" description="MOD_PREV_LOGIN_EMPTY_DESC" default="true" >
+					<option value="true">JYES</option>
+					<option value="false">JNO</option>
 				</field>
+			    <field showon="empty:true" type="note" name="note2" label="MOD_PREV_LOGIN_NOTE2" heading="p" />
+				<field showon="empty:true" name="persoempty" type="textarea" label="MOD_PREV_LOGIN_PERSO_EMPTY" description="MOD_PREV_LOGIN_PERSO_EMPTY_DESC" cols="400" rows="4" filter="raw" 
+					default="{def}"
+					/>			
+				
 			</fieldset>
 			<fieldset name="advanced">
 				<field
@@ -43,10 +57,8 @@
 			</fieldset>
 		</fields>
 	</config>
+	<changelogurl>https://raw.githubusercontent.com/conseilgouz/mod_prev_login_j4/master/mod_prev_login_changelog.xml</changelogurl>		
 	<updateservers>
-	<server type="extension" name="Dernière connexion" priority="1">	
-		http://www.conseilgouz.com/updates/mod_prev_login_update.xml
-	</server>
+	<server type="extension" name="CG Isotope" priority="1">https://raw.githubusercontent.com/conseilgouz/updates_github/master/mod_prev_login_update.xml</server>
 	</updateservers>
-	
 </extension>

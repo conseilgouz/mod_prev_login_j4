@@ -1,12 +1,12 @@
 <?php
 /**
- * @package  mod_prev_login
+ * @module  mod_prev_login for Jommla 4.X
  *
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
- * @copyright (c) 2021 ConseilGouz. All Rights Reserved.
+ * @copyright (c) 2022 ConseilGouz. All Rights Reserved.
  * @author ConseilGouz 
  *
- * version 2.0.1
+ * version 2.1.0
  */
 namespace ConseilGouz\Module\PrevLogin\Site\Helper;
 
