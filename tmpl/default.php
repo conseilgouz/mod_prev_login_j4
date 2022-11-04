@@ -13,6 +13,9 @@ use Joomla\CMS\Language\Text;
 use Joomla\CMS\Factory;
 
 $user = Factory::getUser();
+if ($user->guest) { // only registred user allowed
+	return false;
+}
 $perso = "";
 $first = false;
 $val = $last->profile_value;
