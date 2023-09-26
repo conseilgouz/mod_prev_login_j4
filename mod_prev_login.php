@@ -1,12 +1,11 @@
 <?php
 /**
- * @module  mod_prev_login for Jommla 4.X
+ * @module  mod_prev_login for Jommla 4.X/5.x
  *
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
- * @copyright (c) 2022 ConseilGouz. All Rights Reserved.
+ * @copyright (c) 2023 ConseilGouz. All Rights Reserved.
  * @author ConseilGouz 
  *
- * version 2.1.0
  */
 
 defined('_JEXEC') or die;

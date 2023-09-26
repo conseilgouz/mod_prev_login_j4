@@ -1,12 +1,12 @@
 <?php
 /**
- * @module  mod_prev_login for Jommla 4.X
+ * @module  mod_prev_login for Jommla 4.x/5.x
  *
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  * @copyright (c) 2022 ConseilGouz. All Rights Reserved.
  * @author ConseilGouz 
  *
- * version 2.1.0
+ * version 2.2.0
  */
 namespace ConseilGouz\Module\PrevLogin\Site\Helper;
 
@@ -19,7 +19,7 @@ class PrevLoginHelper
 {
 	public static function getList()
 	{
-		$user   = Factory::getUser();
+		$user   = Factory::getApplication()->getIdentity()
 		$userId = (int) $user->get('id');
 		$db    = Factory::getDbo();
         $query = $db->getQuery(true)

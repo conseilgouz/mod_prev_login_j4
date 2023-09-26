@@ -1,18 +1,18 @@
 <?php
 /**
-* Prev Login Module  - Joomla 4.0.0 Module 
-* Version			: 2.0.1
+* Prev Login Module  - Joomla 4.x/5.x Module 
+* Version			: 2.2.0
 * Package			: Prev Login
-* copyright 		: Copyright (C) 2021 ConseilGouz. All rights reserved.
+* copyright 		: Copyright (C) 2023 ConseilGouz. All rights reserved.
 * license    		: http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
 */
 // No direct access to this file
 defined('_JEXEC') or die;
 use Joomla\CMS\Factory;
 use Joomla\CMS\Language\Text;
-use Joomla\CMS\Filesystem\Folder;
+use Joomla\Filesystem\Folder;
 use Joomla\CMS\Version;
-use Joomla\CMS\Filesystem\File;
+use Joomla\Filesystem\File;
 
 class mod_prev_loginInstallerScript
 {
@@ -23,6 +23,7 @@ class mod_prev_loginInstallerScript
 	private $extname                 = 'prev_login';
 	private $previous_version        = '';
 	private $dir           = null;
+	private $lang;
 	private $installerName = 'prev_logininstaller';
 	public function __construct()
 	{
@@ -155,7 +156,7 @@ class mod_prev_loginInstallerScript
 	}
 	private function uninstallInstaller()
 	{
-		if ( ! JFolder::exists(JPATH_PLUGINS . '/system/' . $this->installerName)) {
+		if ( ! is_dir(JPATH_PLUGINS . '/system/' . $this->installerName)) {
 			return;
 		}
 		$this->delete([
