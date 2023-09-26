@@ -25,7 +25,8 @@
 
 	<config>
 		<fields name="params">
-			<fieldset name="basic">
+			<fieldset name="basic" addfieldprefix="ConseilGouz\Module\PrevLogin\Site\Field">
+				<field name="version" type="version"  margintop="-3em" extension="mod_prev_login"/>
 			    <field type="note" name="note1" label="MOD_PREV_LOGIN_NOTE1" heading="p" />
 				<field name="perso" type="textarea" label="MOD_PREV_LOGIN_PERSO" description="MOD_PREV_LOGIN_PERSO_DESC" cols="400" rows="4" filter="raw" 
 					default="{def} {date}"
