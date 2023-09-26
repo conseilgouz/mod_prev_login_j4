@@ -19,7 +19,7 @@ class PrevLoginHelper
 {
 	public static function getList()
 	{
-		$user   = Factory::getApplication()->getIdentity()
+		$user   = Factory::getApplication()->getIdentity();
 		$userId = (int) $user->get('id');
 		$db    = Factory::getDbo();
         $query = $db->getQuery(true)
