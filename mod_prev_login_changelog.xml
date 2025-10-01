@@ -2,6 +2,21 @@
 	<changelog>
 		<element>mod_prev_login</element>
 		<type>module</type>
+		<version>2.3.0</version>
+        <note>
+            <item>Update : 01/10/2025</item>
+        </note>
+        <fix>
+            <item>Joomla 6.x compatibility</item>
+        </fix>
+		<change>
+            <item>Becomes a service provider</item>
+			<item>Use ConseilGouz Library</item>
+		</change>
+	</changelog>
+	<changelog>
+		<element>mod_prev_login</element>
+		<type>module</type>
 		<version>2.2.0</version>
         <note>
             <item>Update : 26/09/2023</item>

@@ -1,18 +1,22 @@
 <?php
 /**
- * @module  mod_prev_login pour Joomla 4.X/5.x
+ * @module  mod_prev_login pour Joomla 4.X/5.x/6.x
  *
- * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
- * @copyright (c) 2023 ConseilGouz. All Rights Reserved.
+ * @license https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
+ * @copyright (c) 2025 ConseilGouz. All Rights Reserved.
  * @author ConseilGouz 
  *
  */
 
 defined('_JEXEC') or die;
-use Joomla\CMS\Language\Text;
 use Joomla\CMS\Factory;
+use Joomla\CMS\Language\Text;
+use ConseilGouz\Module\PrevLogin\Site\Helper\PrevLoginHelper;
 
-$user = Factory::getUser();
+$moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx',''));
+$last            = PrevLoginHelper::getList();
+
+$user = Factory::getApplication()->getIdentity();
 if ($user->guest) { // only registred user allowed
 	return false;
 }

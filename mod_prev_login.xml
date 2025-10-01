@@ -2,17 +2,17 @@
 <extension type="module" version="1.0" client="site" method="upgrade">
 	<name>Dernière connexion</name>
 	<author>ConseilGouz</author>
-	<creationDate>2023-09-26</creationDate>
-	<copyright>Copyright (C) 2023 ConseilGouz. All rights reserved</copyright>
-	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2</license>
+	<creationDate>2025-10-01</creationDate>
+	<copyright>Copyright (C) 2025 ConseilGouz. All rights reserved</copyright>
+	<license>https://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv2</license>
 	<authorEmail>pascal.leconte@conseilgouz.com</authorEmail>
 	<authorUrl>www.conseilgouz.com</authorUrl>
-	<version>2.2.0</version>
+	<version>2.3.0</version>
 	<namespace path="src">ConseilGouz\Module\PrevLogin</namespace>
 	<scriptfile>script.php</scriptfile>
 	<description>MOD_PREV_LOGIN_XML_DESCRIPTION</description>
 	<files>
-		<filename module="mod_prev_login">mod_prev_login.php</filename>
+		<folder module="mod_prev_login">services</folder>
 		<folder>tmpl</folder>
 		<folder>src</folder>
 	</files>
@@ -25,7 +25,7 @@
 
 	<config>
 		<fields name="params">
-			<fieldset name="basic" addfieldprefix="ConseilGouz\Module\PrevLogin\Site\Field">
+			<fieldset name="basic" addfieldprefix="ConseilGouz\Library\Field">
 				<field name="version" type="version"  margintop="-3em" extension="mod_prev_login"/>
 			    <field type="note" name="note1" label="MOD_PREV_LOGIN_NOTE1" heading="p" />
 				<field name="perso" type="textarea" label="MOD_PREV_LOGIN_PERSO" description="MOD_PREV_LOGIN_PERSO_DESC" cols="400" rows="4" filter="raw" 
